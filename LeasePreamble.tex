@@ -1,0 +1,148 @@
+% This is the preamble
+% <https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Global_structure> of
+% Lease.tex. If you want to change the text of the lease, edit Lease.tex. If you
+% want to change the formatting of the lease, edit this file.
+
+\usepackage[english]{babel}
+\usepackage{calc}
+\usepackage[calc,useregional]{datetime2}
+\usepackage{fancyhdr}
+\usepackage[no-config]{fontspec}
+\usepackage[margin=1.25in,footskip=52bp]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{soulutf8}
+\usepackage{tikz}
+
+% Set up the datetime2 package to format dates using US English, and create a
+% date style that displays only the month and year.
+\DTMusemodule{english}{en-US}
+\DTMnewdatestyle{month year}{%
+  \renewcommand\DTMdisplaydate[4]{\DTMmonthname{##2} \number##1}%
+  \renewcommand\DTMDisplaydate{\DTMdisplaydate}%
+}
+
+% Use Linux Libertine <http://www.linuxlibertine.org>, a free and open-source
+% font.
+\setmainfont[Numbers=Proportional]{Linux Libertine O}
+
+% Don’t add extra space to the top margin. Setting \topskip to 0 can cause
+% problems in LaTeX, so set it to the smallest length that can be expressed in
+% TeX, 1 scaled point (one 65,536th of a point, or about 5 nanometers).
+\topskip1sp
+
+% Change the category code (catcode) of @ to permit using and modifying internal
+% LaTeX commands.
+\makeatletter
+
+% Eliminate lines in fancy headers and footers.
+\renewcommand\headrulewidth{\z@}
+\renewcommand\footrulewidth{\z@}
+
+% Redefine the \subsection command to put section numbers in the margin and
+% titles inline with text. In a standard TeX Live 2016 installation,
+% \@startsection is documented in Section 59.2 of
+% texmf-dist/doc/latex/base/source2e.pdf.
+\renewcommand\subsection{\@startsection%
+  {subsection}             % name
+  {2}                      % level
+  {-\labelLength}          % indent
+  {\z@}                    % skip above
+  {\z@}                    % skip below
+  {\titleStyle\@addperiod} % style
+}
+% Put section numbers in a box that’s 0.25 inches wide, and append periods to
+% section numbers.
+\newlength\labelLength
+\setlength\labelLength{0.25in}
+\def\@seccntformat#1{%
+  {\normalfont\makebox[\labelLength][l]{\csname the#1\endcsname.}}%
+}
+% Don’t prepend numbers of the parent section to section numbers.
+\renewcommand\thesubsection{\arabic{subsection}}
+% Italicize titles.
+\newcommand\titleStyle{\itshape}
+% Append periods to titles.
+\newcommand\@addperiod[1]{#1. }
+
+% Don’t indent paragraphs.
+\parindent\z@
+% Separate paragraphs by 5 pt (“bp” means “big point”, and 1bp is 1/72 inch),
+% plus or minus 2 pt.
+\parskip5bp plus 2bp minus 2bp
+
+% The last Alpha Management Group <http://www.alphamg.net> lease from 2012 used
+% bold and underlining for emphasis haphazardly. Subsequent leases created in
+% Apple Pages 4 <https://en.wikipedia.org/wiki/Pages_(word_processor)> used bold
+% *and* underlining for emphasis, but underlining is much trickier in LaTeX, so
+% just use bold for emphasis.
+\renewcommand\emph[1]{\textbf{#1}}
+
+% Enclose defined term declarations in quotes.
+\newcommand\definedTermDeclaration[1]{“#1”}
+% Underline proviso markers.
+\newcommand\provisoMarker[1]{\ul{#1}}
+
+% Place underlines closer to the baseline. (The second argument is for underline
+% thickness. Leaving it empty leaves underline thickness unchanged.)
+\setul{0.25ex}{}
+
+% Define a compact list.
+\newenvironment{compactList}[2]{%
+  \begin{list}{#1}{%
+    \topsep\z@%
+    \partopsep\z@%
+    \itemsep\z@%
+    \labelsep\z@%
+    \labelwidth\labelLength%
+    \leftmargin\labelwidth%
+    #2%
+  }%
+}{\end{list}}
+
+% Redefine \@mklab to put a list label on the left side of its box.
+\def\@mklab#1{#1\hfil}
+
+% Define an environment and commands for signatures.
+
+\newenvironment{signatureBlock}{%
+  \begin{list}{}{%
+    % Align signature blocks to the outside margin.
+    \setlength\leftmargin{\textwidth-\signatureLineLength}%
+    \parsep\z@%
+    \partopsep\parskip%
+  }\item[]%
+}{\end{list}}
+\newlength\signatureLineLength
+\setlength\signatureLineLength{3in}
+
+\newcommand\signatureLine[1]{%
+  \vspace{42bp}%
+  \makebox[\signatureLineLength]{#1}\hspace{-\signatureLineLength}%
+  \leaders\hrule height-\SOUL@uldepth depth\signatureLineDepth\hfill\kern\z@%
+}
+\newlength\signatureLineDepth
+\setlength\signatureLineDepth{\SOUL@uldepth+\SOUL@ulthickness}
+
+\newcommand\signature[1]{%
+  \raisebox{0sp}[0sp]{\includegraphics[width=0.5\signatureLineLength]{#1}}%
+}
+
+% Restore the catcode of @.
+\makeatother
+
+\AtBeginDocument{
+  % Don’t put extra space after a full stop.
+  \frenchspacing
+  % Use fancy headers and footers.
+  \pagestyle{fancy}
+  % Clear fancy headers and footers, and set a footer in the middle of the page.
+  % Use \pageref* instead of \pageref to prevent creating a link from the page
+  % number.
+  \fancyhf{}
+  \cfoot{\fontsize{9}{9}\selectfont\thepage{} of \pageref*{LastPage}}
+}
+
+\input{support/lease-info.tex}
+\input{support/tenant-info.tex}

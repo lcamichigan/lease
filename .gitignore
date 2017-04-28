@@ -1,0 +1,6 @@
+leases/
+support/
+Lease.*
+!Lease.tex
+info.json
+tenants.csv

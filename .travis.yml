@@ -1,0 +1,52 @@
+os: osx
+
+before_install:
+  # Download and install a minimal TeX Live, based on
+  # https://github.com/latex3/latex3/blob/master/support/texlive.sh.
+  - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  - tar -xzf install-tl-unx.tar.gz
+  - pushd install-tl-20*
+  - echo "selected_scheme scheme-minimal" > texlive.profile
+  - echo "TEXDIR /usr/local/texlive"     >> texlive.profile
+  - echo "option_doc 0"                  >> texlive.profile
+  - echo "option_src 0"                  >> texlive.profile
+  - sudo ./install-tl --profile=texlive.profile
+  - popd
+  - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
+  - sudo tlmgr install
+    babel
+    babel-english
+    datetime2
+    datetime2-english
+    ec
+    etoolbox
+    fancyhdr
+    fontspec
+    geometry
+    graphics
+    hyperref
+    lastpage
+    libertine
+    lm
+    ms
+    oberdiek
+    pgf
+    soul
+    standalone
+    tools
+    tracklang
+    url
+    varwidth
+    xcolor
+    xetex
+    xkeyval
+    zapfding
+  - ln -s /usr/local/texlive/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
+
+  # Install the requests Python package.
+  - pip install requests
+
+script:
+  - python --version
+  - python init.py
+  - python make_leases.py
