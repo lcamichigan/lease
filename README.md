@@ -1,6 +1,6 @@
 # Lease
 
-[![Build status](https://ci.appveyor.com/api/projects/status/npjf6ubsed26wlrg?svg=true)](https://ci.appveyor.com/project/nwhetsell/lease)
+[![Build Status](https://travis-ci.org/lcamichigan/lease.svg?branch=master)](https://travis-ci.org/lcamichigan/lease)
 
 This is a collection of resources for creating and distributing leases of the
 chapter house of [Sigma Zeta of ΛΧΑ](http://lcamichigan.com).
