@@ -62,7 +62,7 @@ with open('tenants.csv') as file:
                 guarantor_address = tenant_address
             file.write('\\newcommand\guarantorAddress{{{}}}\n'.format(guarantor_address))
 
-        for i in range(1):
+        for i in range(2):
             subprocess.check_output([
                 'xetex',
                 '-fmt=xelatex',
