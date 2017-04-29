@@ -1,5 +1,6 @@
 # Lease
 
+[![Build status](https://ci.appveyor.com/api/projects/status/30r7r9c9uwue29cg?svg=true)](https://ci.appveyor.com/project/lcamichigan/lease)
 [![Build Status](https://travis-ci.org/lcamichigan/lease.svg?branch=master)](https://travis-ci.org/lcamichigan/lease)
 
 This is a collection of resources for creating and distributing leases of the
