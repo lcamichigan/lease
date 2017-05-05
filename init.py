@@ -26,7 +26,7 @@ if not os.path.exists(file_path):
 
             "Lease description": "Fall {current_year} and Winter {next_year}",
             "Lease start date": "{current_year}-08",
-            "Lease end date": "{next_year}-05",
+            "Lease end date": "{next_year}-05-15",
             "Rent": [
                 ["{current_year}-08", 700],
                 ["{current_year}-09", 700],

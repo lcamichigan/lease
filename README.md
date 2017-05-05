@@ -133,7 +133,7 @@ macOS). The contents of info.json will be something like:
 
     "Lease description": "Fall 2017 and Winter 2018",
     "Lease start date": "2017-08",
-    "Lease end date": "2018-05",
+    "Lease end date": "2018-05-15",
     "Rent": [
         ["2017-08", 700],
         ["2017-09", 700],
@@ -228,8 +228,7 @@ python send_leases.py
 
 This script sends to each email address in tenants.csv an email with a lease,
 the brochure on lead-based paint you downloaded when you ran init.py, and a
-move-in form. The chapter’s alumni advisor will be cc’d on the email, and you
-will be bcc’d.
+move-in form. The chapter’s alumni advisor will be cc’d on the email.
 
 You’ll be prompted for your email account’s password. If you use a Gmail
 account, Gmail will probably reject your log-in attempt. You must “Allow less
@@ -244,13 +243,13 @@ Here’s a list of summer rent:
 {
     "Lease description": "Summer 2018",
     "Lease start date": "2017-05",
-    "Lease end date": "2017-08",
+    "Lease end date": "2017-08-15",
     "Rent": [
         ["2017-05", 250],
         ["2017-06", 250],
         ["2017-07", 250]
     ],
-    "Lease due date": "2017-05-01"
+    "Lease due date": "2017-05-01",
 }
 ```
 
@@ -260,7 +259,7 @@ Here’s rent for a fall-only lease:
 {
     "Lease description": "Fall 2017",
     "Lease start date": "2017-08",
-    "Lease end date": "2017-12",
+    "Lease end date": "2017-12-31",
     "Rent": [
         ["2017-08", 700],
         ["2017-09", 700],
@@ -268,6 +267,6 @@ Here’s rent for a fall-only lease:
         ["2017-11", 700],
         ["2017-12", 375]
     ],
-    "Lease due date": "2017-04-01"
+    "Lease due date": "2017-04-01",
 }
 ```

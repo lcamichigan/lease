@@ -68,11 +68,10 @@ with open('tenants.csv') as csv_file:
         message['From'] = info['Email address']
         message['To'] = row['Email address']
         message['Cc'] = info['Alumni Advisor email address']
-        message['Bcc'] = message['From']
         message['Subject'] = 'Sigma {} lease'.format(info['Lease description'])
         message.attach(MIMEText(message_template.format(
-            tenant_first_name=tenant_first_name,
-            guarantor_name=row['Guarantor name'].strip()
+            tenant_first_name = tenant_first_name,
+            guarantor_name    = row['Guarantor name'].strip()
         ), 'plain'))
 
         path = os.path.join('leases', '{} {} {} Lease.pdf'.format(tenant_first_name, tenant_last_name, info['Lease description']))
