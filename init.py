@@ -63,8 +63,8 @@ if not os.path.exists(file_path):
     with open(file_path, 'w') as file:
         csv.writer(file).writerows([
             ['Tenant first name', 'Tenant last name', 'Email address', 'Tenant address', 'Guarantor name', 'Guarantor address'],
-            ['Tenant1FirstName', 'Tenant1LastName', 'address1@domain.com', 'Tenant1Address', 'Guarantor1Name'],
-            ['Tenant2FirstName', 'Tenant2LastName', 'address2@domain.com', 'Tenant2Address', 'Guarantor2Name', 'Guarantor2Address']
+            ['Tenant1FirstName', 'Tenant1LastName', 'address1@domain.com', '"Tenant1Address"', 'Guarantor1Name'],
+            ['Tenant2FirstName', 'Tenant2LastName', 'address2@domain.com', '"Tenant2Address"', 'Guarantor2Name', '"Guarantor2Address"']
         ])
 
 directory_name = 'support'
