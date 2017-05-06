@@ -68,7 +68,7 @@ with open('tenants.csv') as csv_file:
         message['From'] = info['Email address']
         message['To'] = row['Email address']
         message['Cc'] = info['Alumni Advisor email address']
-        message['Subject'] = 'Sigma {} lease'.format(info['Lease description'])
+        message['Subject'] = 'Sigma {} Lease'.format(info['Lease description'])
         message.attach(MIMEText(message_template.format(
             tenant_first_name = tenant_first_name,
             guarantor_name    = row['Guarantor name'].strip()
