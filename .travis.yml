@@ -6,10 +6,7 @@ before_install:
   - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   - tar -xzf install-tl-unx.tar.gz
   - pushd install-tl-20*
-  - echo "selected_scheme scheme-minimal" > texlive.profile
-  - echo "TEXDIR /usr/local/texlive"     >> texlive.profile
-  - echo "option_doc 0"                  >> texlive.profile
-  - echo "option_src 0"                  >> texlive.profile
+  - echo -e "selected_scheme scheme-minimal\nTEXDIR /usr/local/texlive\noption_doc 0\noption_src 0" > texlive.profile
   - sudo ./install-tl --profile=texlive.profile
   - popd
   - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
