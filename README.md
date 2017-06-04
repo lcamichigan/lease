@@ -64,11 +64,11 @@ One way to do this is to create a symbolic link to the folder containing this
 font by entering in Terminal
 
 ``` sh
-ln -s /usr/local/texlive/2016/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
+ln -s /usr/local/texlive/2017/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
 ```
 
-(If you’re using an older version of MacTeX, you’ll need to replace texlive/2016
-with, for example, texlive/2015.)
+(If you’re using an older version of MacTeX, you’ll need to replace texlive/2017
+with, for example, texlive/2016.)
 
 Python is included with macOS.
 
