@@ -9,7 +9,7 @@ chapter house of [Sigma Zeta of ΛΧΑ](http://lcamichigan.com).
 ## Getting Started
 
 To make leases, you need [XeTeX](http://xetex.sourceforge.net),
-[Python](https://www.python.org), and the [requests](http://python-requests.org)
+[Python](https://www.python.org), and the [Requests](http://python-requests.org)
 Python package. All of these are free and cross-platform. You also need the
 OpenType version of the font [Linux Libertine](http://www.linuxlibertine.org).
 This is also free, and you’ll get it automatically when you install XeTeX.
@@ -33,7 +33,7 @@ download and run an installer for the latest release of Python 2 or 3 (you can
 use either version). Make sure you add python.exe to your Windows PATH when you
 install Python.
 
-To install the [requests](http://python-requests.org) package, open a Command
+To install the [Requests](http://python-requests.org) package, open a Command
 Prompt and enter:
 
 ```batch
@@ -72,7 +72,7 @@ with, for example, texlive/2016.)
 
 Python is included with macOS.
 
-To install the [requests](http://python-requests.org) package, enter in Terminal
+To install the [Requests](http://python-requests.org) package, enter in Terminal
 
 ```sh
 sudo easy_install requests
