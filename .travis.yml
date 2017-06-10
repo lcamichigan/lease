@@ -5,14 +5,12 @@ before_install:
   # https://github.com/latex3/latex3/blob/master/support/texlive.sh.
   - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   - tar -xzf install-tl-unx.tar.gz
-  - pushd install-tl-20*
+  - cd install-tl-20*
   - echo -e "selected_scheme scheme-minimal\nTEXDIR /usr/local/texlive\noption_doc 0\noption_src 0" > texlive.profile
   - sudo ./install-tl --profile=texlive.profile
-  - popd
+  - cd ..
   - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
   - sudo tlmgr install
-    babel
-    babel-english
     datetime2
     datetime2-english
     ec
@@ -25,7 +23,6 @@ before_install:
     lastpage
     libertine
     lm
-    ms
     oberdiek
     pgf
     soul
@@ -40,7 +37,6 @@ before_install:
     zapfding
   - ln -s /usr/local/texlive/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
 
-  # Install the requests Python package.
   - pip install requests
 
 script:

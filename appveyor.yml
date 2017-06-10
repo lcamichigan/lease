@@ -18,11 +18,10 @@ install:
   # execution until a key is pressed. Remove these.
   - ps: Set-Content install-tl-windows.bat (Get-Content install-tl-windows.bat | Select-String -Pattern '^pause$' -NotMatch)
   - ps: Set-Content texlive.profile "selected_scheme scheme-minimal`nTEXDIR C:\texlive`noption_doc 0`noption_src 0`n"
-  - install-tl-windows -gui text -profile=texlive.profile
+  - install-tl-windows -gui=text -profile=texlive.profile
+  - cd ..
   - set PATH=%PATH%;C:\texlive\bin\win32
   - tlmgr install
-    babel
-    babel-english
     datetime2
     datetime2-english
     ec
@@ -35,7 +34,6 @@ install:
     lastpage
     libertine
     lm
-    ms
     oberdiek
     pgf
     soul
@@ -48,12 +46,10 @@ install:
     xetex
     xkeyval
     zapfding
-  - cd ..
 
   # Switch to the environment’s version of Python.
   - set PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%
 
-  # Install the requests Python package.
   - pip install requests
 
 build_script:
