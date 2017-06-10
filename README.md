@@ -55,7 +55,7 @@ browser. On Windows 7 and later, you can use
 ### On macOS
 
 The easiest way to install XeTeX is probably to install
-[MacTeX](http://www.tug.org/mactex/). To install MacTeX, visit
+[MacTeX](https://www.tug.org/mactex/). To install MacTeX, visit
 https://tug.org/mactex/mactex-download.html, download MacTeX.pkg, and then
 double-click MacTeX.pkg.
 
