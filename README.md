@@ -227,8 +227,9 @@ python send_leases.py
 ```
 
 This script sends to each email address in tenants.csv an email with a lease,
-the brochure on lead-based paint you downloaded when you ran init.py, and a
-move-in form. The chapter’s alumni advisor will be cc’d on the email.
+the brochure on lead-based paint you downloaded when you
+[ran init.py](#before-making-leases-for-the-first-time), and a move-in form. The
+chapter’s alumni advisor will be cc’d on the email.
 
 You’ll be prompted for your email account’s password. If you use a Gmail
 account, Gmail will probably reject your log-in attempt. You must “Allow less
