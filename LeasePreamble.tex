@@ -125,7 +125,7 @@
 \setlength\signatureLineDepth{\SOUL@uldepth+\SOUL@ulthickness}
 
 \newcommand\signature[1]{%
-  \raisebox{0sp}[0sp]{\includegraphics[width=0.5\signatureLineLength]{#1}}%
+  \raisebox{\z@}[\z@]{\includegraphics[width=0.5\signatureLineLength]{#1}}%
 }
 
 % Restore the catcode of @.
