@@ -81,8 +81,8 @@ sudo easy_install requests
 ## How to Make Leases
 
 First, download this repository as a ZIP archive. To do this, click
-[here](https://github.com/nwhetsell/lease/archive/master.zip). Unzip the archive
-wherever you wish.
+[here](https://github.com/lcamichigan/lease/archive/master.zip). Unzip the
+archive wherever you wish.
 
 To make leases, you enter commands in Command Prompt on Windows or Terminal on
 macOS. Open Command Prompt on Windows or Terminal on macOS, and then `cd` to the
