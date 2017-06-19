@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\input{LeasePreamble.tex}
+\input LeasePreamble
 
 \begin{document}
 
@@ -30,7 +30,8 @@ areas of the Premises with other lessees of the Premises.
 
 \subsection{Term}
 The term of this Lease (the \definedTermDeclaration{Term}) is
-\emph{\the\termDuration\ 24-hour periods} starting on \emph{\DTMusedate{lease start date}} and ending on
+\emph{\the\termDuration\ 24-hour periods} starting on
+\emph{\DTMusedate{lease start date}} and ending on
 \emph{\DTMusedate{lease end date}}.
 
 \subsection{Rent}
@@ -478,10 +479,10 @@ Captions are to assist with identification and have no legal significance.
   }
   % Among other things, Ann Arbor City Charter §19.4(f) requires “a solid black
   % border at least one-eighth inch thick”, …
-  \setlength\fboxrule{0.125in}
+  \fboxrule0.125in
   % … “at least one-half inch white space between the interior of the border and
   % the notice type”, …
-  \setlength\fboxsep{0.5in}
+  \fboxsep0.5in
   % and “at least one inch white space between the exterior of the border and
   % any type outside of the border”.
   \vspace{1in}

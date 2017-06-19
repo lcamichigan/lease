@@ -24,7 +24,7 @@
 
 % Use Linux Libertine <http://www.linuxlibertine.org>, a free and open-source
 % font.
-\setmainfont[Numbers=Proportional]{Linux Libertine O}
+\setmainfont{Linux Libertine O}[Numbers=Proportional]
 
 % Don’t add extra space to the top margin. Setting \topskip to 0 can cause
 % problems in LaTeX, so set it to the smallest length that can be expressed in
@@ -54,7 +54,7 @@
 % Put section numbers in a box that’s 0.25 inches wide, and append periods to
 % section numbers.
 \newlength\labelLength
-\setlength\labelLength{0.25in}
+\labelLength0.25in
 \def\@seccntformat#1{%
   {\normalfont\makebox[\labelLength][l]{\csname the#1\endcsname.}}%
 }
@@ -114,7 +114,7 @@
   }\item[]%
 }{\end{list}}
 \newlength\signatureLineLength
-\setlength\signatureLineLength{3in}
+\signatureLineLength3in
 
 \newcommand\signatureLine[1]{%
   \vspace{42bp}%
@@ -143,5 +143,5 @@
   \cfoot{\fontsize{9}{9}\selectfont\thepage\ of \pageref*{LastPage}}
 }
 
-\input{support/lease-info.tex}
-\input{support/tenant-info.tex}
+\input support/lease-info
+\input support/tenant-info
