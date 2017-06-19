@@ -487,7 +487,7 @@ Captions are to assist with identification and have no legal significance.
   % any type outside of the border”.
   \vspace{1in}
   \fbox{%
-    \parbox{\linewidth-2\fboxsep-2\fboxrule}{\parindent0.25in%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\parindent0.25in%
       % Ann Arbor City Charter §19.4(e) says, “The notice shall be in eleven
       % point boldface type or larger.”
       \fontsize{12}{14.5}\selectfont\bfseries%
@@ -768,7 +768,7 @@ or by their grossly negligent or intentional actions.
 % Setting the inner (left) margin to 0 causes an issue with footer placement.
 % As a workaround, add negative horizontal space to eliminate the inner margin
 % <https://en.wikibooks.org/wiki/LaTeX/Page_Layout#Page_dimensions>.
-\hspace*{-\oddsidemargin}\hspace*{-1in}\hspace*{-\hoffset}%
+\hspace*{\dimexpr-\oddsidemargin-1in-\hoffset\relax}%
 % Draw the form using TikZ/PGF <https://www.ctan.org/pkg/pgf> so that check
 % marks, a signature, and a date can be included.
 \begin{tikzpicture}[

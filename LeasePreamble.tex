@@ -3,7 +3,6 @@
 % Lease.tex. If you want to change the text of the lease, edit Lease.tex. If you
 % want to change the formatting of the lease, edit this file.
 
-\usepackage{calc}
 \usepackage[calc,useregional]{datetime2}
 \usepackage{fancyhdr}
 \usepackage[no-config]{fontspec}
@@ -108,7 +107,7 @@
 \newenvironment{signatureBlock}{%
   \begin{list}{}{%
     % Align signature blocks to the outside margin.
-    \setlength\leftmargin{\textwidth-\signatureLineLength}%
+    \leftmargin\dimexpr\textwidth-\signatureLineLength\relax%
     \parsep\z@%
     \partopsep\parskip%
   }\item[]%
@@ -122,7 +121,7 @@
   \leaders\hrule height-\SOUL@uldepth depth\signatureLineDepth\hfill\kern\z@%
 }
 \newlength\signatureLineDepth
-\setlength\signatureLineDepth{\SOUL@uldepth+\SOUL@ulthickness}
+\signatureLineDepth\dimexpr\SOUL@uldepth+\SOUL@ulthickness\relax
 
 \newcommand\signature[1]{%
   \raisebox{\z@}[\z@]{\includegraphics[width=0.5\signatureLineLength]{#1}}%

@@ -27,7 +27,6 @@ before_install:
     pgf
     soul
     standalone
-    tools
     tracklang
     url
     varwidth
