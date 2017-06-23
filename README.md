@@ -50,7 +50,8 @@ To view leases, you need a PDF viewer. On Windows 10, you can view PDF files in
 the built-in
 [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)
 browser. On Windows 7 and later, you can use
-[Adobe Acrobat Reader](https://get.adobe.com/reader/).
+[Adobe Acrobat Reader](https://get.adobe.com/reader/) or
+[Google Chrome](https://www.google.com/chrome/).
 
 ### On macOS
 
