@@ -44,7 +44,7 @@ before_install:
     zapfding
   - ln -s /usr/local/texlive/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
 
-  - pip install requests
+  - pip install requests || sudo easy_install requests
 
 script:
   - python --version
