@@ -1,4 +1,12 @@
+language: generic
 os: osx
+
+# https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version
+matrix:
+  include:
+    - osx_image: xcode8.3 # macOS Sierra v10.12
+    - osx_image: xcode7.3 # OS X El Capitan v10.11
+    - osx_image: xcode6.4 # OS X Yosemite v10.10
 
 before_install:
   # Download and install a minimal TeX Live, based on
