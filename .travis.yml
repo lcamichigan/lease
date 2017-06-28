@@ -44,6 +44,7 @@ before_install:
     zapfding
   - ln -s /usr/local/texlive/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
 
+  # The Travis CI OS X Yosemite v10.10 image lacks pip.
   - pip install requests || sudo easy_install requests
 
 script:
