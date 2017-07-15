@@ -15,7 +15,7 @@ before_install:
   - tar -xzf install-tl-unx.tar.gz
   - cd install-tl-20*
   - echo -e "selected_scheme scheme-minimal\nTEXDIR /usr/local/texlive\noption_doc 0\noption_src 0" > texlive.profile
-  - sudo ./install-tl --profile=texlive.profile
+  - sudo ./install-tl -profile=texlive.profile
   - cd ..
   - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
   - sudo tlmgr install
