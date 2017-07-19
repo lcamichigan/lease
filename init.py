@@ -95,7 +95,7 @@ if not os.path.exists(file_path):
         (
             '\documentclass[varwidth]{standalone}'
             '\\begin{document}\sffamily '
-            'Replace ' + file_path.replace('\\', '\\textbackslash{}') + '\par with an image of a signature.'
+            'Replace ' + file_path.replace('\\', '\\textbackslash ') + '\par with an image of a signature.'
             '\end{document}'
         )
     ])
