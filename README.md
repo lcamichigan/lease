@@ -17,9 +17,10 @@ This is also free, and you’ll get it automatically when you install XeTeX.
 To send leases, you need an email account, preferably a Gmail account.
 
 You don’t need to do any TeX or Python programming to make and send leases.
-However, you should be familiar with entering commands in Command Prompt on
-Windows or Terminal on macOS. It’ll also be helpful to have some exposure to
-[JSON](https://en.wikipedia.org/wiki/JSON), but this isn’t essential.
+However, you should be familiar with entering commands in PowerShell or Command
+Prompt on Windows, or in Terminal on macOS. It’ll also be helpful to have some
+exposure to [JSON](https://en.wikipedia.org/wiki/JSON), but this isn’t
+essential.
 
 ### On Windows
 
@@ -33,8 +34,8 @@ download and run an installer for the latest release of Python 2 or 3 (you can
 use either version). Make sure you add python.exe to your Windows PATH when you
 install Python.
 
-To install the [Requests](http://python-requests.org) package, open a Command
-Prompt and enter:
+To install the [Requests](http://python-requests.org) package, enter in
+PowerShell or Command Prompt:
 
 ```batch
 pip install requests
@@ -85,9 +86,9 @@ First, download this repository as a ZIP archive. To do this, click
 [here](https://github.com/lcamichigan/lease/archive/master.zip). Unzip the
 archive wherever you wish.
 
-To make leases, you enter commands in Command Prompt on Windows or Terminal on
-macOS. Open Command Prompt on Windows or Terminal on macOS, and then `cd` to the
-folder you just unzipped.
+To make thank you notes, you enter commands in PowerShell or Command Prompt on
+Windows, or in Terminal on macOS. Open PowerShell or Command Prompt on Windows,
+or Terminal on macOS, and then `cd` to the folder you just unzipped.
 
 ### Before Making Leases for the First Time…
 
