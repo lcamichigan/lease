@@ -86,9 +86,9 @@ First, download this repository as a ZIP archive. To do this, click
 [here](https://github.com/lcamichigan/lease/archive/master.zip). Unzip the
 archive wherever you wish.
 
-To make thank you notes, you enter commands in PowerShell or Command Prompt on
-Windows, or in Terminal on macOS. Open PowerShell or Command Prompt on Windows,
-or Terminal on macOS, and then `cd` to the folder you just unzipped.
+To make leases, you enter commands in PowerShell or Command Prompt on Windows,
+or in Terminal on macOS. Open PowerShell or Command Prompt on Windows, or
+Terminal on macOS, and then `cd` to the folder you just unzipped.
 
 ### Before Making Leases for the First Time…
 
