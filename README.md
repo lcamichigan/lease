@@ -6,6 +6,19 @@
 This is a collection of resources for creating and distributing leases of the
 chapter house of [Sigma Zeta of ΛΧΑ](http://lcamichigan.com).
 
+## Contents
+
+* [Getting Started](#getting-started)
+  * [On Windows](#on-windows)
+  * [On macOS](#on-macos)
+* [How to Make Leases](#how-to-make-leases)
+  * [Before Making Leases for the First Time…](#before-making-leases-for-the-first-time)
+  * [Update info.json](#update-infojson)
+  * [Update tenants.csv](#update-tenantscsv)
+  * [Make Leases](#make-leases)
+* [Sending Leases](#sending-leases)
+* [Example Rent Lists](#example-rent-lists)
+
 ## Getting Started
 
 To make leases, you need [XeTeX](http://xetex.sourceforge.net),
@@ -120,7 +133,7 @@ information in info.json and tenants.csv. You’ll see placeholder information i
 the leases. You must update info.json and tenants.csv with information about the
 leases you’re making.
 
-#### info.json
+### Update info.json
 
 Open info.json in a text editor (you can use Notepad on Windows or TextEdit on
 macOS). The contents of info.json will be something like:
@@ -191,7 +204,7 @@ The list of monthly rents (starting with `["2017-08", 700]`) assumes a
 fall/winter lease with rent at $700/month. See
 [Example Rent Lists](#example-rent-lists) for more examples of lists of rent.
 
-#### tenants.csv
+### Update tenants.csv
 
 You can open and edit tenants.csv in many applications for working with
 spreadsheets, including
@@ -212,7 +225,7 @@ Replace the default data with information about tenants.
 The “Guarantor address” field is optional. If you leave it blank, the guarantor
 address will be the same as the tenant address.
 
-### Making Leases
+### Make Leases
 
 To make leases, enter
 
