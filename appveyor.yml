@@ -59,7 +59,6 @@ build_script:
 test: off
 
 artifacts:
-  - path: lease\Tenant1FirstName Tenant1LastName Fall 2017 and Winter 2018 Lease.pdf
-    name: Lease.pdf
+  - path: Lease.pdf
 
 skip_tags: true
