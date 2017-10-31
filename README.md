@@ -27,7 +27,7 @@ Python package. All of these are free and cross-platform. You also need the
 OpenType version of the font [Linux Libertine](http://www.linuxlibertine.org).
 This is also free, and you’ll get it automatically when you install XeTeX.
 
-To send leases, you need an email account, preferably a Gmail account.
+To send leases, you need an email account.
 
 You don’t need to do any TeX or Python programming to make and send leases.
 However, you should be familiar with entering commands in PowerShell or Command
@@ -142,9 +142,7 @@ macOS). The contents of info.json will be something like:
 {
     "Name": "Your Name",
     "Title": "Your Title, Sigma Alumni Association",
-    "Email address": "your.address@gmail.com",
-    "SMTP host": "smtp.gmail.com",
-    "SMTP port": 587,
+    "Email address": "your.address@domain.com",
 
     "Lease description": "Fall 2017 and Winter 2018",
     "Lease start date": "2017-08",
@@ -195,10 +193,7 @@ to
 "Name": "John Doe"
 ```
 
-Keep in mind:
-
-* If you use a Gmail account, you don’t need to change the SMTP host or port
-* Dates are formatted as YYYY-MM or YYYY-MM-DD
+Dates are formatted as YYYY-MM or YYYY-MM-DD
 
 The list of monthly rents (starting with `["2017-08", 700]`) assumes a
 fall/winter lease with rent at $700/month. See

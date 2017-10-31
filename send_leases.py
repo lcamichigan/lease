@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 
 import csv
-from datetime import datetime
-import getpass
-import json
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from datetime import datetime
+import getpass
+import json
 import os
 import smtplib
+import sys
+import textwrap
 
 
 with open('info.json') as file:
@@ -55,9 +57,48 @@ for path in [os.path.join('support', 'lead_in_your_home_brochure_land_b_w_508_ea
     attachment.add_header('Content-Disposition', 'attachment', filename=os.path.basename(path))
     common_attachments.append(attachment)
 
-server = smtplib.SMTP(info['SMTP host'], info['SMTP port'])
+email_address = info['Email address'];
+if 'SMTP host' in info and 'SMTP port' in info:
+    SMTP_host = info['SMTP host']
+    SMTP_port = info['SMTP port']
+else:
+    email_domain = email_address.partition('@')[2].lower()
+    if 'gmail.com' == email_domain:
+        # https://support.google.com/mail/answer/7126229
+        SMTP_host = info.get('SMTP host', 'smtp.gmail.com')
+        SMTP_port = info.get('SMTP port', 587)
+    elif 'outlook.com' == email_domain:
+        # https://support.office.com/en-us/article/POP-IMAP-and-SMTP-settings-for-Outlook-com-d088b986-291d-42b8-9564-9c414e2aa040
+        SMTP_host = info.get('SMTP host', 'smtp-mail.outlook.com')
+        SMTP_port = info.get('SMTP port', 587)
+    elif 'yahoo.com' == email_domain:
+        # https://help.yahoo.com/kb/SLN4724.html
+        SMTP_host = info.get('SMTP host', 'smtp.mail.yahoo.com')
+        SMTP_port = info.get('SMTP port', 587)
+    elif 'aol.com' == email_domain:
+        # https://help.aol.com/articles/how-do-i-use-other-email-applications-to-send-and-receive-my-aol-mail
+        SMTP_host = info.get('SMTP host', 'smtp.aol.com')
+        SMTP_port = info.get('SMTP port', 465)
+    elif 'umich.edu' == email_domain:
+        # http://documentation.its.umich.edu/node/309
+        SMTP_host = info.get('SMTP host', 'smtp.mail.umich.edu')
+        SMTP_port = info.get('SMTP port', 587)
+    else:
+        sys.exit(textwrap.dedent('''
+            To send leases, add an SMTP host and port to info.json, like this:
+
+                "Email address": "{}",
+                "SMTP host": "<SMTP host>",
+                "SMTP port": <SMTP port>,
+
+            Replace <SMTP host> with an SMTP host (possibly smtp.{}).
+            Replace <SMTP port> with a port number (probably 587).
+            Look in the documentation of your email provider for this information.
+        '''.format(email_address, email_domain)))
+
+server = smtplib.SMTP(SMTP_host, SMTP_port)
 server.starttls()
-server.login(info['Email address'], getpass.getpass())
+server.login(email_address, getpass.getpass())
 
 with open('tenants.csv') as csv_file:
     for row in csv.DictReader(csv_file):

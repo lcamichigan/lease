@@ -20,9 +20,7 @@ if not os.path.exists(file_path):
         {{
             "Name": "Your Name",
             "Title": "Your Title, Sigma Alumni Association",
-            "Email address": "your.address@gmail.com",
-            "SMTP host": "smtp.gmail.com",
-            "SMTP port": 587,
+            "Email address": "your.address@domain.com",
 
             "Lease description": "Fall {current_year} and Winter {next_year}",
             "Lease start date": "{current_year}-08",
