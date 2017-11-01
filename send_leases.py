@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import csv
+from datetime import datetime
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from datetime import datetime
 import getpass
 import json
 import os
