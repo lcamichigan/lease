@@ -12,7 +12,7 @@ install:
   # Download and install a minimal TeX Live, based on
   # https://github.com/latex3/latex3/blob/master/support/texlive.sh.
   - wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-  - tar -xzf install-tl-unx.tar.gz
+  - tar -xf install-tl-unx.tar.gz
   - cd install-tl-20*
   - echo -e "selected_scheme scheme-minimal\nTEXDIR /usr/local/texlive\noption_doc 0\noption_src 0" > texlive.profile
   - sudo ./install-tl -profile=texlive.profile
