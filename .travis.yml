@@ -44,7 +44,7 @@ install:
     zapfding
   - ln -s /usr/local/texlive/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
 
-  # OS X Yosemite images and macOS Sierra 10.12 images after 31 Oct 2017 lack
+  # OS X Yosemite images, and macOS Sierra 10.12 images after 31 Oct 2017, lack
   # pip.
   - pip install requests || sudo easy_install requests
 
