@@ -13,8 +13,7 @@ import requests
 file_path = 'info.json'
 if not os.path.exists(file_path):
     with open(file_path, 'w') as file:
-        today = date.today()
-        current_year = today.year
+        current_year = date.today().year
         next_year = current_year + 1
         file.write(textwrap.dedent('''
         {{
@@ -26,15 +25,15 @@ if not os.path.exists(file_path):
             "Lease start date": "{current_year}-08",
             "Lease end date": "{next_year}-05-15",
             "Rent": [
-                ["{current_year}-08", 700],
-                ["{current_year}-09", 700],
-                ["{current_year}-10", 700],
-                ["{current_year}-11", 700],
-                ["{current_year}-12", 700],
-                ["{next_year}-01", 700],
-                ["{next_year}-02", 700],
-                ["{next_year}-03", 700],
-                ["{next_year}-04", 700]
+                ["{current_year}-08", 720],
+                ["{current_year}-09", 720],
+                ["{current_year}-10", 720],
+                ["{current_year}-11", 720],
+                ["{current_year}-12", 720],
+                ["{next_year}-01", 720],
+                ["{next_year}-02", 720],
+                ["{next_year}-03", 720],
+                ["{next_year}-04", 720]
             ],
             "Lease due date": "{current_year}-04-01",
 
@@ -47,13 +46,11 @@ if not os.path.exists(file_path):
             "Alumni Advisor address": "123 Main St, Elsewhere MI 00000-0000",
 
             "Sigma signatory name": "Warren Cole",
-            "Sigma signatory title": "President",
-            "Sigma signature date": "{today}"
+            "Sigma signatory title": "President"
         }}
         '''.format(
             current_year = current_year,
-            next_year    = next_year,
-            today        = today
+            next_year    = next_year
         )).lstrip())
 
 file_path = 'tenants.csv'

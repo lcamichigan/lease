@@ -144,24 +144,24 @@ macOS). The contents of info.json will be something like:
     "Title": "Your Title, Sigma Alumni Association",
     "Email address": "your.address@domain.com",
 
-    "Lease description": "Fall 2017 and Winter 2018",
-    "Lease start date": "2017-08",
-    "Lease end date": "2018-05-15",
+    "Lease description": "Fall 2018 and Winter 2019",
+    "Lease start date": "2018-08",
+    "Lease end date": "2019-05-15",
     "Rent": [
-        ["2017-08", 700],
-        ["2017-09", 700],
-        ["2017-10", 700],
-        ["2017-11", 700],
-        ["2017-12", 700],
-        ["2018-01", 700],
-        ["2018-02", 700],
-        ["2018-03", 700],
-        ["2018-04", 700]
+        ["2018-08", 720],
+        ["2018-09", 720],
+        ["2018-10", 720],
+        ["2018-11", 720],
+        ["2018-12", 720],
+        ["2019-01", 720],
+        ["2019-02", 720],
+        ["2019-03", 720],
+        ["2019-04", 720]
     ],
-    "Lease due date": "2017-04-01",
+    "Lease due date": "2018-04-01",
 
     "Security deposit": 500,
-    "Security deposit due date": "2017-05-15",
+    "Security deposit due date": "2018-05-15",
     "Security deposit location": "ABC Bank, 123 Main St, Anywhere MI 00000-0000",
 
     "Alumni Advisor name": "John Mason",
@@ -169,8 +169,7 @@ macOS). The contents of info.json will be something like:
     "Alumni Advisor address": "123 Main St, Elsewhere MI 00000-0000",
 
     "Sigma signatory name": "Warren Cole",
-    "Sigma signatory title": "President",
-    "Sigma signature date": "2017-04-27"
+    "Sigma signatory title": "President"
 }
 ```
 
@@ -253,14 +252,14 @@ Here’s a list of summer rent:
 ```json
 {
     "Lease description": "Summer 2018",
-    "Lease start date": "2017-05",
-    "Lease end date": "2017-08-15",
+    "Lease start date": "2018-05",
+    "Lease end date": "2018-08-15",
     "Rent": [
-        ["2017-05", 250],
-        ["2017-06", 250],
-        ["2017-07", 250]
+        ["2018-05", 250],
+        ["2018-06", 250],
+        ["2018-07", 250]
     ],
-    "Lease due date": "2017-05-01",
+    "Lease due date": "2018-05-01",
 }
 ```
 
@@ -268,16 +267,16 @@ Here’s rent for a fall-only lease:
 
 ```json
 {
-    "Lease description": "Fall 2017",
-    "Lease start date": "2017-08",
-    "Lease end date": "2017-12-31",
+    "Lease description": "Fall 2018",
+    "Lease start date": "2018-08",
+    "Lease end date": "2018-12-31",
     "Rent": [
-        ["2017-08", 700],
-        ["2017-09", 700],
-        ["2017-10", 700],
-        ["2017-11", 700],
-        ["2017-12", 350]
+        ["2018-08", 720],
+        ["2018-09", 720],
+        ["2018-10", 720],
+        ["2018-11", 720],
+        ["2018-12", 360]
     ],
-    "Lease due date": "2017-04-01",
+    "Lease due date": "2018-04-01",
 }
 ```
