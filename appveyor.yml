@@ -31,6 +31,7 @@ install:
     geometry
     graphics
     hyperref
+    hyphenex
     lastpage
     libertine
     lm
@@ -62,6 +63,3 @@ artifacts:
   - path: Lease.pdf
 
 skip_tags: true
-
-on_finish:
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

@@ -28,6 +28,7 @@ install:
     geometry
     graphics
     hyperref
+    hyphenex
     lastpage
     libertine
     lm
