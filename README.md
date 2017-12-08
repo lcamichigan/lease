@@ -194,8 +194,8 @@ to
 
 Dates are formatted as YYYY-MM or YYYY-MM-DD
 
-The list of monthly rents (starting with `["2017-08", 700]`) assumes a
-fall/winter lease with rent at $700/month. See
+The list of monthly rents (starting with `["2018-08", 720]`) assumes a
+fall/winter lease with rent at $720/month. See
 [Example Rent Lists](#example-rent-lists) for more examples of lists of rent.
 
 ### Update tenants.csv
