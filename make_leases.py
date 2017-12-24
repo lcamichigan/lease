@@ -64,7 +64,7 @@ with open('tenants.csv') as file:
 
         # Run XeTeX three times so that references are correct.
         for _ in range(2):
-            subprocess.check_output([
+            subprocess.check_call([
                 'xetex',
                 '-fmt=xelatex',
                 '-interaction=batchmode',

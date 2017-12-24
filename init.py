@@ -81,7 +81,7 @@ if not os.path.exists(file_path):
 jobname = 'SigmaSignature'
 file_path = os.path.join(directory_name, jobname + '.pdf')
 if not os.path.exists(file_path):
-    subprocess.check_output([
+    subprocess.check_call([
         'xetex',
         '-fmt=xelatex',
         '-interaction=batchmode',
