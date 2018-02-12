@@ -78,7 +78,7 @@ After you install MacTeX, you must install the font Linux Libertine system-wide.
 One way to do this is to create a symbolic link to the folder containing this
 font by entering in Terminal
 
-``` sh
+```sh
 ln -s /usr/local/texlive/2017/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
 ```
 
@@ -105,7 +105,7 @@ Terminal on macOS, and then `cd` to the folder you just unzipped.
 
 ### Before Making Leases for the First Time…
 
-If you’re making leases for the first time,  enter
+If you’re making leases for the first time, enter
 
 ```sh
 python init.py
