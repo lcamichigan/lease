@@ -17,7 +17,7 @@ with open('info.json') as file:
     info = json.load(file)
 
 date_template = '{date:%B} {date.day}, {date.year}'
-lease_start_date = date_template.format(date=datetime.strptime(info['Lease start date'] + '-15', '%Y-%m-%d'))
+lease_start_date = date_template.format(date=datetime.strptime(info['Lease start date'], '%Y-%m-%d'))
 security_deposit_due_date = datetime.strptime(info['Security deposit due date'], '%Y-%m-%d')
 
 message_template = '''{{tenant_first_name}},

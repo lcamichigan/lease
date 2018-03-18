@@ -145,7 +145,7 @@ macOS). The contents of info.json will be something like:
     "Email address": "your.address@domain.com",
 
     "Lease description": "Fall 2018 and Winter 2019",
-    "Lease start date": "2018-08",
+    "Lease start date": "2018-08-15",
     "Lease end date": "2019-05-15",
     "Rent": [
         ["2018-08", 720],
@@ -247,12 +247,26 @@ a good idea to disallow less secure apps after you send leases.
 
 ## Example Rent Lists
 
-Here’s a list of summer rent:
+Here’s rent for a spring-only lease:
 
 ```json
 {
-    "Lease description": "Summer 2018",
-    "Lease start date": "2018-05",
+    "Lease description": "Spring 2018",
+    "Lease start date": "2018-05-15",
+    "Lease end date": "2018-06-30",
+    "Rent": [
+        ["2018-05", 375]
+    ],
+    "Lease due date": "2018-05-01",
+}
+```
+
+Here’s rent for a spring/summer lease:
+
+```json
+{
+    "Lease description": "Spring and Summer 2018",
+    "Lease start date": "2018-05-15",
     "Lease end date": "2018-08-15",
     "Rent": [
         ["2018-05", 250],
@@ -263,12 +277,26 @@ Here’s a list of summer rent:
 }
 ```
 
+Here’s rent for a summer-only lease:
+
+```json
+{
+    "Lease description": "Summer 2018",
+    "Lease start date": "2018-07-01",
+    "Lease end date": "2018-08-15",
+    "Rent": [
+        ["2018-07", 375]
+    ],
+    "Lease due date": "2018-05-01",
+}
+```
+
 Here’s rent for a fall-only lease:
 
 ```json
 {
     "Lease description": "Fall 2018",
-    "Lease start date": "2018-08",
+    "Lease start date": "2018-08-15",
     "Lease end date": "2018-12-31",
     "Rent": [
         ["2018-08", 720],

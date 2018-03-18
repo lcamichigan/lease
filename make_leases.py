@@ -17,7 +17,7 @@ with open('info.json') as file:
 
 with open(os.path.join('support', 'lease-info.tex'), 'w') as file:
     file.write('\\newcommand\leaseDescription{{{}}}\n'.format(info['Lease description']))
-    file.write('\DTMsavedate{{lease start date}}{{{}-15}}\n'.format(info['Lease start date']))
+    file.write('\DTMsavedate{{lease start date}}{{{}}}\n'.format(info['Lease start date']))
     file.write('\DTMsavedate{{lease end date}}{{{}}}\n'.format(info['Lease end date']))
     file.write(
         '\\newcount\\termDuration\n'

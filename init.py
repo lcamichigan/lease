@@ -22,7 +22,7 @@ if not os.path.exists(file_path):
             "Email address": "your.address@domain.com",
 
             "Lease description": "Fall {current_year} and Winter {next_year}",
-            "Lease start date": "{current_year}-08",
+            "Lease start date": "{current_year}-08-15",
             "Lease end date": "{next_year}-05-15",
             "Rent": [
                 ["{current_year}-08", 720],
