@@ -97,7 +97,7 @@ else:
         '''.format(email_address, email_domain)))
 
 server = smtplib.SMTP(SMTP_host, SMTP_port)
-server.starttls()
+assert server.starttls()[0] == 220, 'Starting TLS failed'
 server.login(email_address, getpass.getpass())
 
 with open('tenants.csv') as csv_file:
