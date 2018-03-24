@@ -15,6 +15,15 @@ if not os.path.exists(directory_name):
 with open('info.json') as file:
     info = json.load(file)
 
+today = datetime.today()
+lease_due_date = datetime.strptime(info['Lease due date'], '%Y-%m-%d')
+assert today < lease_due_date, 'Lease due date in info.json must be in the future'
+security_deposit_due_date = datetime.strptime(info['Security deposit due date'], '%Y-%m-%d')
+assert lease_due_date < security_deposit_due_date, 'Security deposit due date in info.json must be after lease due date'
+lease_start_date = datetime.strptime(info['Lease start date'], '%Y-%m-%d')
+assert security_deposit_due_date <= lease_start_date, 'Lease start date in info.json must be on or after security deposit due date'
+assert lease_start_date < datetime.strptime(info['Lease end date'], '%Y-%m-%d'), 'Lease end date in info.json must be after start date'
+
 with open(os.path.join('support', 'lease-info.tex'), 'w') as file:
     file.write('\\newcommand\leaseDescription{{{}}}\n'.format(info['Lease description']))
     file.write('\DTMsavedate{{lease start date}}{{{}}}\n'.format(info['Lease start date']))
@@ -45,7 +54,7 @@ with open(os.path.join('support', 'lease-info.tex'), 'w') as file:
     file.write('\\newcommand\AlumniAdvisorAddress{{{}}}\n'.format(info['Alumni Advisor address']))
     file.write('\\newcommand\SigmaSignatoryName{{{}}}\n'.format(info['Sigma signatory name']))
     file.write('\\newcommand\SigmaSignatoryTitle{{{}}}\n'.format(info['Sigma signatory title']))
-    file.write('\\newcommand\SigmaSignatureDate{{{date:%B} {date.day}, {date.year}}}\n'.format(date=datetime.today()))
+    file.write('\\newcommand\SigmaSignatureDate{{{date:%B} {date.day}, {date.year}}}\n'.format(date=today))
 
 with open('tenants.csv') as file:
     for row in csv.DictReader(file):
