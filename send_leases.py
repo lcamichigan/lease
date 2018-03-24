@@ -45,7 +45,7 @@ Please let me know if you have any questions.
     security_deposit_invoice_date = security_deposit_due_date.strftime('%B 1, %Y'),
     security_deposit              = '{:,.2f}'.format(info['Security deposit']),
     security_deposit_due_date     = date_template.format(date=security_deposit_due_date),
-    first_rent_invoice_date       = datetime.strptime(info['Lease start date'], '%Y-%m').strftime('%B 1, %Y'),
+    first_rent_invoice_date       = datetime.strptime(info['Lease start date'], '%Y-%m-%d').strftime('%B 1, %Y'),
     name                          = info['Name'],
     title                         = info['Title']
 )
