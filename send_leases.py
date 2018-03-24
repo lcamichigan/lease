@@ -65,24 +65,24 @@ else:
     email_domain = email_address.partition('@')[2].lower()
     if 'gmail.com' == email_domain:
         # https://support.google.com/mail/answer/7126229
-        SMTP_host = info.get('SMTP host', 'smtp.gmail.com')
-        SMTP_port = info.get('SMTP port', 587)
+        SMTP_host = 'smtp.gmail.com'
+        SMTP_port = 587
     elif 'outlook.com' == email_domain:
         # https://support.office.com/en-us/article/POP-IMAP-and-SMTP-settings-for-Outlook-com-d088b986-291d-42b8-9564-9c414e2aa040
-        SMTP_host = info.get('SMTP host', 'smtp-mail.outlook.com')
-        SMTP_port = info.get('SMTP port', 587)
+        SMTP_host = 'smtp-mail.outlook.com'
+        SMTP_port = 587
     elif 'yahoo.com' == email_domain:
         # https://help.yahoo.com/kb/SLN4724.html
-        SMTP_host = info.get('SMTP host', 'smtp.mail.yahoo.com')
-        SMTP_port = info.get('SMTP port', 587)
+        SMTP_host = 'smtp.mail.yahoo.com'
+        SMTP_port = 587
     elif 'aol.com' == email_domain:
         # https://help.aol.com/articles/how-do-i-use-other-email-applications-to-send-and-receive-my-aol-mail
-        SMTP_host = info.get('SMTP host', 'smtp.aol.com')
-        SMTP_port = info.get('SMTP port', 465)
+        SMTP_host = 'smtp.aol.com'
+        SMTP_port = 465
     elif 'umich.edu' == email_domain:
         # http://documentation.its.umich.edu/node/309
-        SMTP_host = info.get('SMTP host', 'smtp.mail.umich.edu')
-        SMTP_port = info.get('SMTP port', 587)
+        SMTP_host = 'smtp.mail.umich.edu'
+        SMTP_port = 587
     else:
         sys.exit(textwrap.dedent('''
             To send leases, add an SMTP host and port to info.json, like this:
@@ -95,6 +95,9 @@ else:
             Replace <SMTP port> with a port number (probably 587).
             Look in the documentation of your email provider for this information.
         '''.format(email_address, email_domain)))
+
+    SMTP_host = info.get('SMTP host', SMTP_host)
+    SMTP_port = info.get('SMTP port', SMTP_port)
 
 server = smtplib.SMTP(SMTP_host, SMTP_port)
 assert server.starttls()[0] == 220, 'Starting TLS failed'
