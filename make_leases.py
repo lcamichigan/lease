@@ -6,6 +6,7 @@ import json
 import os
 import shutil
 import subprocess
+import warnings
 
 
 directory_name = 'leases'
@@ -17,7 +18,8 @@ with open('info.json') as file:
 
 today = datetime.today()
 lease_due_date = datetime.strptime(info['Lease due date'], '%Y-%m-%d')
-assert today <= lease_due_date, 'Lease due date in info.json must not be in the past'
+if today >= lease_due_date:
+    warnings.warn('Lease due date in info.json is not in the future')
 security_deposit_due_date = datetime.strptime(info['Security deposit due date'], '%Y-%m-%d')
 assert lease_due_date < security_deposit_due_date, 'Security deposit due date in info.json must be after lease due date'
 lease_start_date = datetime.strptime(info['Lease start date'], '%Y-%m-%d')
