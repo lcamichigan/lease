@@ -76,8 +76,8 @@ with open('tenants.csv') as file:
         # Run XeTeX three times so that references are correct.
         for _ in range(2):
             subprocess.check_call([
-                'luatex',
-                '-fmt=lualatex',
+                'xetex',
+                '-fmt=xelatex',
                 '-interaction=batchmode',
                 'Lease.tex'
             ])
