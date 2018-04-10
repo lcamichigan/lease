@@ -51,7 +51,7 @@ install:
   # pip.
   - 'if [ ! -x "$(command -v pip)" ]; then
        curl --remote-name https://bootstrap.pypa.io/get-pip.py;
-       python get-pip.py;
+       sudo python get-pip.py;
      fi'
 
   - sudo pip install requests
