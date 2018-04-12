@@ -21,11 +21,11 @@ chapter house of [Sigma Zeta of ΛΧΑ](http://lcamichigan.com).
 
 ## Getting Started
 
-To make leases, you need [XeTeX](http://xetex.sourceforge.net),
+To make leases, you need [LuaTeX](http://www.luatex.org),
 [Python](https://www.python.org), and the [Requests](http://python-requests.org)
 Python package. All of these are free and cross-platform. You also need the
-OpenType version of the font [Linux Libertine](http://www.linuxlibertine.org).
-This is also free, and you’ll get it automatically when you install XeTeX.
+OpenType version of the font [Linux Libertine](http://libertine-fonts.org). This
+is also free, and you’ll get it automatically when you install LuaTeX.
 
 To send leases, you need an email account.
 
@@ -37,7 +37,7 @@ essential.
 
 ### On Windows
 
-The most reliable way to install XeTeX is probably to install
+The most reliable way to install LuaTeX is probably to install
 [TeX Live](https://www.tug.org/texlive/). To install TeX Live, visit
 https://www.tug.org/texlive/acquire-netinstall.html, and then download and run
 install-tl-windows.exe. Note that installing TeX Live can take a few hours.
@@ -69,21 +69,10 @@ browser. On Windows 7 and later, you can use
 
 ### On macOS
 
-The easiest way to install XeTeX is probably to install
+The easiest way to install LuaTeX is probably to install
 [MacTeX](https://www.tug.org/mactex/). To install MacTeX, visit
 https://tug.org/mactex/mactex-download.html, download MacTeX.pkg, and then
 double-click MacTeX.pkg.
-
-After you install MacTeX, you must install the font Linux Libertine system-wide.
-One way to do this is to create a symbolic link to the folder containing this
-font by entering in Terminal
-
-```sh
-ln -s /usr/local/texlive/2017/texmf-dist/fonts/opentype/public/libertine ~/Library/Fonts/libertine
-```
-
-(If you’re using an older version of MacTeX, you’ll need to replace texlive/2017
-with, for example, texlive/2016.)
 
 Python is included with macOS.
 

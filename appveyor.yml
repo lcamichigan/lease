@@ -33,8 +33,10 @@ install:
     hyperref
     hyphenex
     lastpage
+    latex-bin
     libertine
-    lm
+    luaotfload
+    luatex85
     oberdiek
     pgf
     soul
@@ -43,9 +45,7 @@ install:
     url
     varwidth
     xcolor
-    xetex
     xkeyval
-    zapfding
 
   # Switch to the environment’s version of Python.
   - set PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%

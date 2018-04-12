@@ -82,12 +82,16 @@ jobname = 'SigmaSignature'
 file_path = os.path.join(directory_name, jobname + '.pdf')
 if not os.path.exists(file_path):
     subprocess.check_call([
-        'xetex',
-        '-fmt=xelatex',
+        'luatex',
+        '-fmt=lualatex',
         '-interaction=batchmode',
         '-jobname=' + jobname,
         '-output-directory=' + directory_name,
         (
+            # See
+            # https://tex.stackexchange.com/questions/315025/lualatex-texlive-2016-standalone-undefined-control-sequence
+            # for more information about why the luatex85 package is required.
+            '\RequirePackage{luatex85}'
             '\documentclass[varwidth]{standalone}'
             '\\begin{document}\sffamily '
             'Replace ' + file_path.replace('\\', '\\textbackslash ') + '\par with an image of a signature.'
