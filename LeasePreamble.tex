@@ -9,7 +9,10 @@
 \usepackage[no-config]{fontspec}
 \usepackage[margin=1.25in,footskip=52bp]{geometry}
 \usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
+% See
+% https://tex.stackexchange.com/questions/24445/hyperref-lualatex-and-unicode-bookmarks-issue-garbled-page-numbers-in-ar-for-l
+% for why pdfencoding=auto is needed.
+\usepackage[hidelinks,pdfencoding=auto]{hyperref}
 \usepackage{lastpage}
 \usepackage{soulutf8}
 \usepackage{tikz}
