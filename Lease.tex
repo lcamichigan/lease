@@ -559,7 +559,12 @@ or any liability to third parties.
 \clearpage % Start the Rules and Regulations Addendum on a new page.
 
 \section*{Rules and Regulations Addendum}
-\setcounter{subsection}{0}
+% When the section counter is incremented, the subsection counter is reset.
+% However, the starred version of the section command doesn’t increment the
+% section counter. Resetting the subsection counter using
+%   \setcounter{subsection}{0}
+% would result in duplicate PDF bookmarks, so increment the section counter.
+\stepcounter{section}
 
 The following rules and regulations are part of this Lease as provided by
 Section~\ref{Entire Agreement} on page~\pageref{Entire Agreement}.
