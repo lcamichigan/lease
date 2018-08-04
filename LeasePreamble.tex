@@ -31,7 +31,7 @@
 % Don’t add extra space to the top margin. Setting \topskip to 0 can cause
 % problems in LaTeX, so set it to the smallest length that can be expressed in
 % TeX, 1 scaled point (one 65,536th of a point, or about 5 nanometers).
-\topskip1sp
+\topskip=1sp
 
 % Change the category code (catcode) of @ to permit using and modifying internal
 % LaTeX commands.
@@ -56,7 +56,7 @@
 % Put section numbers in a box that’s 0.25 inches wide, and append periods to
 % section numbers.
 \newlength\labelLength
-\labelLength0.25in
+\labelLength=0.25in
 \def\@seccntformat#1{%
   {\normalfont\makebox[\labelLength][l]{\csname the#1\endcsname.}}%
 }
@@ -71,7 +71,7 @@
 \parindent\z@
 % Separate paragraphs by 5 pt (“bp” means “big point”, and 1bp is 1/72 inch),
 % plus or minus 2 pt.
-\parskip5bp plus 2bp minus 2bp
+\parskip=5bp plus 2bp minus 2bp
 
 % The last Alpha Management Group <http://www.alphamg.net> lease from 2012 used
 % bold and underlining for emphasis haphazardly. Subsequent leases created in
@@ -106,7 +106,6 @@
 \def\@mklab#1{#1\hfil}
 
 % Define an environment and commands for signatures.
-
 \newenvironment{signatureBlock}{%
   \begin{list}{}{%
     % Align signature blocks to the outside margin.
@@ -116,7 +115,7 @@
   }\item[]%
 }{\end{list}}
 \newlength\signatureLineLength
-\signatureLineLength3in
+\signatureLineLength=3in
 
 \newcommand\signatureLine[1]{%
   \vspace{42bp}%
