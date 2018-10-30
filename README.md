@@ -133,24 +133,24 @@ macOS). The contents of info.json will be something like:
     "Title": "Your Title, Sigma Alumni Association",
     "Email address": "your.address@domain.com",
 
-    "Lease description": "Fall 2018 and Winter 2019",
-    "Lease start date": "2018-08-15",
-    "Lease end date": "2019-05-15",
+    "Lease description": "Fall 2019 and Winter 2020",
+    "Lease start date": "2019-08-15",
+    "Lease end date": "2020-05-15",
     "Rent": [
-        ["2018-08", 720],
-        ["2018-09", 720],
-        ["2018-10", 720],
-        ["2018-11", 720],
-        ["2018-12", 720],
-        ["2019-01", 720],
-        ["2019-02", 720],
-        ["2019-03", 720],
-        ["2019-04", 720]
+        ["2019-08", 740],
+        ["2019-09", 740],
+        ["2019-10", 740],
+        ["2019-11", 740],
+        ["2019-12", 740],
+        ["2020-01", 740],
+        ["2020-02", 740],
+        ["2020-03", 740],
+        ["2020-04", 740]
     ],
-    "Lease due date": "2018-04-01",
+    "Lease due date": "2019-04-01",
 
     "Security deposit": 500,
-    "Security deposit due date": "2018-05-15",
+    "Security deposit due date": "2019-05-15",
     "Security deposit location": "ABC Bank, 123 Main St, Anywhere MI 00000-0000",
 
     "Alumni Advisor name": "John Mason",
@@ -183,8 +183,8 @@ to
 
 Dates are formatted as YYYY-MM or YYYY-MM-DD
 
-The list of monthly rents (starting with `["2018-08", 720]`) assumes a
-fall/winter lease with rent at $720/month. See
+The list of monthly rents (starting with `["2019-08", 740]`) assumes a
+fall/winter lease with rent at $740/month. See
 [Example Rent Lists](#example-rent-lists) for more examples of lists of rent.
 
 ### Update tenants.csv
@@ -240,13 +240,13 @@ Here’s rent for a spring-only lease:
 
 ```json
 {
-    "Lease description": "Spring 2018",
-    "Lease start date": "2018-05-15",
-    "Lease end date": "2018-06-30",
+    "Lease description": "Spring 2019",
+    "Lease start date": "2019-05-15",
+    "Lease end date": "2019-06-30",
     "Rent": [
-        ["2018-05", 375]
+        ["2019-05", 375]
     ],
-    "Lease due date": "2018-05-01",
+    "Lease due date": "2019-05-01",
 }
 ```
 
@@ -254,15 +254,15 @@ Here’s rent for a spring/summer lease:
 
 ```json
 {
-    "Lease description": "Spring and Summer 2018",
-    "Lease start date": "2018-05-15",
-    "Lease end date": "2018-08-15",
+    "Lease description": "Spring and Summer 2019",
+    "Lease start date": "2019-05-15",
+    "Lease end date": "2019-08-15",
     "Rent": [
-        ["2018-05", 250],
-        ["2018-06", 250],
-        ["2018-07", 250]
+        ["2019-05", 250],
+        ["2019-06", 250],
+        ["2019-07", 250]
     ],
-    "Lease due date": "2018-05-01",
+    "Lease due date": "2019-05-01",
 }
 ```
 
@@ -270,13 +270,13 @@ Here’s rent for a summer-only lease:
 
 ```json
 {
-    "Lease description": "Summer 2018",
-    "Lease start date": "2018-07-01",
-    "Lease end date": "2018-08-15",
+    "Lease description": "Summer 2019",
+    "Lease start date": "2019-07-01",
+    "Lease end date": "2019-08-15",
     "Rent": [
-        ["2018-07", 375]
+        ["2019-07", 375]
     ],
-    "Lease due date": "2018-05-01",
+    "Lease due date": "2019-05-01",
 }
 ```
 
@@ -284,16 +284,16 @@ Here’s rent for a fall-only lease:
 
 ```json
 {
-    "Lease description": "Fall 2018",
-    "Lease start date": "2018-08-15",
-    "Lease end date": "2018-12-31",
+    "Lease description": "Fall 2019",
+    "Lease start date": "2019-08-15",
+    "Lease end date": "2019-12-31",
     "Rent": [
-        ["2018-08", 720],
-        ["2018-09", 720],
-        ["2018-10", 720],
-        ["2018-11", 720],
-        ["2018-12", 360]
+        ["2019-08", 740],
+        ["2019-09", 740],
+        ["2019-10", 740],
+        ["2019-11", 740],
+        ["2019-12", 380]
     ],
-    "Lease due date": "2018-04-01",
+    "Lease due date": "2019-04-01",
 }
 ```

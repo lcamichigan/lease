@@ -26,15 +26,15 @@ if not os.path.exists(file_path):
             "Lease start date": "{current_year}-08-15",
             "Lease end date": "{next_year}-05-15",
             "Rent": [
-                ["{current_year}-08", 720],
-                ["{current_year}-09", 720],
-                ["{current_year}-10", 720],
-                ["{current_year}-11", 720],
-                ["{current_year}-12", 720],
-                ["{next_year}-01", 720],
-                ["{next_year}-02", 720],
-                ["{next_year}-03", 720],
-                ["{next_year}-04", 720]
+                ["{current_year}-08", 740],
+                ["{current_year}-09", 740],
+                ["{current_year}-10", 740],
+                ["{current_year}-11", 740],
+                ["{current_year}-12", 740],
+                ["{next_year}-01", 740],
+                ["{next_year}-02", 740],
+                ["{next_year}-03", 740],
+                ["{next_year}-04", 740]
             ],
             "Lease due date": "{current_year}-04-01",
 
