@@ -123,7 +123,7 @@
   \leaders\hrule height-\SOUL@uldepth depth\signatureLineDepth\hfill\kern\z@%
 }
 \newlength\signatureLineDepth
-\signatureLineDepth\dimexpr\SOUL@uldepth+\SOUL@ulthickness\relax
+\signatureLineDepth=\dimexpr\SOUL@uldepth+\SOUL@ulthickness\relax
 
 \newcommand\signature[1]{%
   \raisebox{\z@}[\z@]{\includegraphics[width=0.5\signatureLineLength]{#1}}%
