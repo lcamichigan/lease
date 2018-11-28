@@ -16,7 +16,7 @@ if not os.path.exists(file_path):
     with open(file_path, 'w') as file:
         current_year = date.today().year
         next_year = current_year + 1
-        file.write(textwrap.dedent('''
+        file.write(textwrap.dedent('''\
         {{
             "Name": "Your Name",
             "Title": "Your Title, Sigma Alumni Association",
@@ -52,7 +52,7 @@ if not os.path.exists(file_path):
         '''.format(
             current_year = current_year,
             next_year    = next_year
-        )).lstrip())
+        )))
 
 file_path = 'tenants.csv'
 if not os.path.exists(file_path):
