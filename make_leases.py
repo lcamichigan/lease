@@ -22,7 +22,7 @@ lease_due_date = datetime.strptime(info['Lease due date'], '%Y-%m-%d')
 if today >= lease_due_date:
     warnings.warn('Lease due date in info.json is not in the future')
 security_deposit_due_date = datetime.strptime(info['Security deposit due date'], '%Y-%m-%d')
-assert lease_due_date < security_deposit_due_date, 'Security deposit due date in info.json must be after lease due date'
+assert lease_due_date <= security_deposit_due_date, 'Security deposit due date in info.json must be on or after lease due date'
 lease_start_date = datetime.strptime(info['Lease start date'], '%Y-%m-%d')
 assert security_deposit_due_date <= lease_start_date, 'Lease start date in info.json must be on or after security deposit due date'
 assert lease_start_date < datetime.strptime(info['Lease end date'], '%Y-%m-%d'), 'Lease end date in info.json must be after start date'
