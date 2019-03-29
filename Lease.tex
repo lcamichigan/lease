@@ -9,19 +9,28 @@
 This lease (the \definedTermDeclaration{Lease}) is made between
 \emph{Sigma Alumni Association of Lambda Chi Alpha,~Inc.}, a Michigan nonprofit
 corporation (the \definedTermDeclaration{Landlord}), and
-\emph{\tenantName} (the \definedTermDeclaration{Tenant}). Tenant, whose address
-is \emph{\tenantAddress}, is a member of \emph{Sigma Zeta} (the
+\emph{\tenantName} (the \definedTermDeclaration{Tenant}). Tenant%
+%
+\ifbool{isFraternityMember}{%
+, whose address is \emph{\tenantAddress}, is a member of \emph{Sigma Zeta} (the
 \definedTermDeclaration{Chapter}) of \emph{Lambda Chi Alpha} (the
-\definedTermDeclaration{Fraternity}). Landlord’s billing service (the
-\definedTermDeclaration{Billing Service}) is \emph{GreekBill,~Inc.}, whose
-address is \emph{23224 Crenshaw Blvd, Torrance CA 90505-3171}.
+\definedTermDeclaration{Fraternity})%
+}{%
+’s address is \emph{\tenantAddress}%
+}%
+%
+. Landlord’s billing service (the \definedTermDeclaration{Billing Service}) is
+\emph{GreekBill,~Inc.}, whose address is \emph{23224 Crenshaw Blvd, Torrance CA
+90505-3171}.
 
 \subsection{Premises}
 \emph{1601 Washtenaw Ave, Ann Arbor MI 48104-3586} is the
 \definedTermDeclaration{Premises}. Landlord agrees to lease to Tenant a room in
-the Premises. Tenant shall select this room according to the policies of the
-Chapter, and Tenant shall have full, non-exclusive access to and use of this
-room.
+the Premises.
+\ifbool{isFraternityMember}{%
+Tenant shall select this room according to the policies of the Chapter, and
+Tenant shall have full, non-exclusive access to and use of this room.
+}{}%
 
 \subsection{Tenants and Common Areas}
 Tenant together with other lessees of the Premises are the
@@ -118,6 +127,7 @@ security deposit claim notices) are deemed received by the addressee on the next
 regular day for delivery of mail after being properly addressed, stamped with
 sufficient postage, and deposited in a United States mailbox.
 
+\ifbool{isFraternityMember}{%
 \subsection{Cancellation Due to Associate Membership}
 If Tenant is an associate member of the Fraternity on the Lease Due Date and
 Tenant is not an initiated member of the Fraternity on
@@ -125,6 +135,7 @@ Tenant is not an initiated member of the Fraternity on
 may end this Lease. If this Lease is so ended, any money paid by Tenant on
 account of this Lease shall be refunded promptly by Landlord, and Tenant and
 Landlord shall have no further obligations under this Lease.
+}{}%
 
 \subsection{Application of Tenant’s Money}
 Money received by Landlord from Tenant (or on Tenant’s behalf) shall be applied
@@ -253,8 +264,10 @@ following events:
 
 \begin{compactList}{(\alph{enumi})}{\usecounter{enumi}}
   \item Tenant pays rent late on three or more occasions.
+  \ifbool{isFraternityMember}{%
   \item The Fraternity revokes the Chapter’s charter.
   \item Tenant is expelled or resigns from the Chapter or the Fraternity.
+  }{}%
   \item Tenant is expelled from the University of Michigan.
   \item Tenant is convicted of or pleads no contest to a felony crime.
 \end{compactList}
@@ -363,8 +376,12 @@ Premises are untenantable.
 
 \subsection{Assignment, Subletting, and Occupancy}
 Tenant may not assign this Lease or sublet any of the Premises without
-Landlord’s prior written permission. Landlord may require that any lease
-assignment or sublet is to another member of the Chapter. Landlord may evaluate
+Landlord’s prior written permission.
+\ifbool{isFraternityMember}{%
+Landlord may require that any lease
+assignment or sublet is to another member of the Chapter.
+}{}%
+Landlord may evaluate
 proposed assignees and subtenants as it evaluates prospective Tenant, including
 acceptability to remaining prime Tenant. Only Tenant may occupy the Premises.
 Tenant may not have any guest occupy Tenant’s room for more than 4~consecutive
@@ -585,10 +602,27 @@ shall return all keys to Landlord when the Premises have been vacated. If the
 key to Tenant’s room is not returned to Landlord, Tenant shall pay as additional
 rent \$25.00. Keys returned to Landlord individually or after the date of
 vacating the Premises shall not waive such charges.
+%
+\ifbool{isFraternityMember}{%
+all keys shall be labeled and returned
+to the Chapter president or house manager, who
+shall return all keys to Landlord when the Premises have been vacated.
+}{%
+Tenant shall return the key to Tenant’s room to Landlord.
+}%
+%
+If the
+key to Tenant’s room is not returned to Landlord, Tenant shall pay as additional
+rent \$25.00.
+Keys returned to Landlord individually or after the date of
+vacating the Premises shall not waive such charges.
 
 \subsection{Parking}
+\ifbool{isFraternityMember}{%
 Tenant may be assigned one or more vehicle parking spaces available at the
-Premises according to the policies of the Chapter. Landlord makes no warranties
+Premises according to the policies of the Chapter.
+}{}%
+Landlord makes no warranties
 or guarantees that vehicle parking spaces sufficient to accommodate the vehicles
 of all Tenants will be available at the Premises. Tenant shall park only on the
 paved parking lot. Landlord may designate parking procedures for authorized
@@ -651,8 +685,11 @@ systems. Tenant shall protect all such fixtures and systems against damage.
 \end{compactList}
 
 \subsection{Use of Premises}
+\ifbool{isFraternityMember}{%
 Use of the Premises shall be limited to Tenants, Chapter members, Chapter alumni
-and their respective guests. Landlord reserves the right to host social events,
+and their respective guests.
+}{}%
+Landlord reserves the right to host social events,
 meetings and gatherings in the common areas of the Premises, in a manner that
 does not interfere with the rights of Tenant. Landlord shall give Tenant
 reasonable advance notice of such events.
@@ -686,12 +723,14 @@ on page~\pageref{Default and Remedies} of this Lease.
   cleaning or flooring replacement related to maintaining unauthorized pets on
   the Premises.
 
+  \ifbool{isFraternityMember}{%
   \item {\titleStyle Fraternity and University Policies.} Tenant shall abide by
   all policies, rules, and regulations relating to new member recruitment,
   alcohol, controlled substances, and hazing imposed by the Fraternity, the
   Chapter, the University of Michigan, and the University of Michigan
   Interfraternity Council, which are incorporated by reference as if set forth
   herein in full.
+  }{}%
 
   \item {\titleStyle Prohibited Items.} Tenant and Tenant’s guests shall not
   possess, store, or use on the Premises any item that is explosive, incendiary,
@@ -700,9 +739,11 @@ on page~\pageref{Default and Remedies} of this Lease.
   and flammable items. For avoidance of doubt, Tenant and Tenant’s guests shall
   not possess firearms on the Premises even if Tenant and Tenant’s guests all
   have valid Concealed Pistol Licenses. Tenant shall not burn candles, incense,
-  or other substances except during and as prescribed in official Fraternity
-  ceremonies. Tenant shall not possess a fuel-burning space heater on the
-  Premises.
+  or other substances%
+  \ifbool{isFraternityMember}{%
+  \ except during and as prescribed in official Fraternity ceremonies%
+  }{}%
+  . Tenant shall not possess a fuel-burning space heater on the Premises.
 
   \item {\titleStyle Microwaves.} Tenant may possess and use 1 microwave in
   Tenant’s room in the Premises. Tenant shall not possess any additional cooking
@@ -753,8 +794,11 @@ on page~\pageref{Default and Remedies} of this Lease.
 \end{compactList}
 
 \subsection{Tenant Liability Insurance}
+\ifbool{isFraternityMember}{%
 Tenant shall participate in and pay the individual premium for the Fraternity’s
-liability insurance program. Tenant hereby releases and agrees to indemnify
+liability insurance program.
+}{}%
+Tenant hereby releases and agrees to indemnify
 Landlord from and against any and all claims for personal injury as well as
 claims for loss, destruction, or theft of personal property sustained by or
 brought by Tenant or guests of Tenant while in or on the Premises, unless caused

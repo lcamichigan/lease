@@ -199,10 +199,10 @@ tenants.csv in any text editor.
 
 By default, tenants.csv contains data like this:
 
-Tenant first name | Tenant last name | Email address       | Tenant address | Guarantor name | Guarantor address
-------------------|------------------|---------------------|----------------|----------------|------------------
-Tenant1FirstName  | Tenant1LastName  | address1@domain.com | Tenant1Address | Guarantor1Name |
-Tenant2FirstName  | Tenant2LastName  | address2@domain.com | Tenant2Address | Guarantor2Name | Guarantor2Address
+Tenant first name | Tenant last name | Email address       | Tenant address | Is Fraternity member | Guarantor name | Guarantor address
+------------------|------------------|---------------------|----------------|----------------------|----------------|------------------
+Tenant1FirstName  | Tenant1LastName  | address1@domain.com | Tenant1Address | TRUE                 | Guarantor1Name |
+Tenant2FirstName  | Tenant2LastName  | address2@domain.com | Tenant2Address | TRUE                 | Guarantor2Name | Guarantor2Address
 
 Replace the default data with information about tenants.
 
