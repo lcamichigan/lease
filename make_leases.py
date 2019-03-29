@@ -37,12 +37,12 @@ with open(os.path.join('support', 'lease-info.tex'), 'w') as file:
         '\\newcommand\\rentTable{\n'
     )
     rent_total = 0
-    for monthAndRent in info['Rent']:
-        file.write('{}&\\${:,.2f}\\\\\n'.format(
-            datetime.strptime(monthAndRent[0], '%Y-%m').strftime('%B 15, %Y'),
-            monthAndRent[1]
+    for rentDueDateAndAmount in info['Rent']:
+        file.write('{date:%B} {date.day}, {date.year}&\\${amount:,.2f}\\\\\n'.format(
+            date=datetime.strptime(rentDueDateAndAmount[0], '%Y-%m-%d'),
+            amount=rentDueDateAndAmount[1]
         ))
-        rent_total += monthAndRent[1]
+        rent_total += rentDueDateAndAmount[1]
     file.write('}\n')
     file.write('\\newcommand\\rentTotal{{\${:,.2f}}}\n'.format(rent_total))
     file.write('\DTMsavedate{{lease due date}}{{{}}}\n'.format(info['Lease due date']))

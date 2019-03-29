@@ -138,15 +138,15 @@ macOS). The contents of info.json will be something like:
     "Lease start date": "2019-08-15",
     "Lease end date": "2020-05-15",
     "Rent": [
-        ["2019-08", 740],
-        ["2019-09", 740],
-        ["2019-10", 740],
-        ["2019-11", 740],
-        ["2019-12", 740],
-        ["2020-01", 740],
-        ["2020-02", 740],
-        ["2020-03", 740],
-        ["2020-04", 740]
+        ["2019-08-15", 740],
+        ["2019-09-15", 740],
+        ["2019-10-15", 740],
+        ["2019-11-15", 740],
+        ["2019-12-15", 740],
+        ["2020-01-15", 740],
+        ["2020-02-15", 740],
+        ["2020-03-15", 740],
+        ["2020-04-15", 740]
     ],
     "Monthly rent during holdover": 1110,
 
@@ -182,7 +182,7 @@ to
 "Name": "John Doe"
 ```
 
-Dates are formatted as YYYY-MM or YYYY-MM-DD
+Dates are formatted as YYYY-MM-DD
 
 The list of monthly rents (starting with `["2019-08", 740]`) assumes a
 fall/winter lease with rent at $740/month. See
@@ -246,7 +246,7 @@ Here’s rent for a spring-only lease:
     "Lease start date": "2019-05-15",
     "Lease end date": "2019-06-30",
     "Rent": [
-        ["2019-05", 375]
+        ["2019-05-15", 375]
     ],
     "Monthly rent during holdover": 1110,
 }
@@ -261,9 +261,9 @@ Here’s rent for a spring/summer lease:
     "Lease start date": "2019-05-15",
     "Lease end date": "2019-08-15",
     "Rent": [
-        ["2019-05", 250],
-        ["2019-06", 250],
-        ["2019-07", 250]
+        ["2019-05-15", 250],
+        ["2019-06-15", 250],
+        ["2019-07-15", 250]
     ],
     "Monthly rent during holdover": 1110,
 }
@@ -278,7 +278,7 @@ Here’s rent for a summer-only lease:
     "Lease start date": "2019-07-01",
     "Lease end date": "2019-08-15",
     "Rent": [
-        ["2019-07", 375]
+        ["2019-07-15", 375]
     ],
     "Monthly rent during holdover": 1110,
 }
@@ -293,11 +293,11 @@ Here’s rent for a fall-only lease:
     "Lease start date": "2019-08-15",
     "Lease end date": "2019-12-31",
     "Rent": [
-        ["2019-08", 740],
-        ["2019-09", 740],
-        ["2019-10", 740],
-        ["2019-11", 740],
-        ["2019-12", 370]
+        ["2019-08-15", 740],
+        ["2019-09-15", 740],
+        ["2019-10-15", 740],
+        ["2019-11-15", 740],
+        ["2019-1-152", 370]
     ],
     "Monthly rent during holdover": 1110,
 }
