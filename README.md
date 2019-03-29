@@ -134,6 +134,7 @@ macOS). The contents of info.json will be something like:
     "Email address": "your.address@domain.com",
 
     "Lease description": "Fall 2019 and Winter 2020",
+    "Lease due date": "2019-04-01",
     "Lease start date": "2019-08-15",
     "Lease end date": "2020-05-15",
     "Rent": [
@@ -147,7 +148,7 @@ macOS). The contents of info.json will be something like:
         ["2020-03", 740],
         ["2020-04", 740]
     ],
-    "Lease due date": "2019-04-01",
+    "Monthly rent during holdover": 1110,
 
     "Security deposit": 500,
     "Security deposit due date": "2019-05-15",
@@ -241,12 +242,13 @@ Here’s rent for a spring-only lease:
 ```json
 {
     "Lease description": "Spring 2019",
+    "Lease due date": "2019-05-01",
     "Lease start date": "2019-05-15",
     "Lease end date": "2019-06-30",
     "Rent": [
         ["2019-05", 375]
     ],
-    "Lease due date": "2019-05-01",
+    "Monthly rent during holdover": 1110,
 }
 ```
 
@@ -255,6 +257,7 @@ Here’s rent for a spring/summer lease:
 ```json
 {
     "Lease description": "Spring and Summer 2019",
+    "Lease due date": "2019-05-01",
     "Lease start date": "2019-05-15",
     "Lease end date": "2019-08-15",
     "Rent": [
@@ -262,7 +265,7 @@ Here’s rent for a spring/summer lease:
         ["2019-06", 250],
         ["2019-07", 250]
     ],
-    "Lease due date": "2019-05-01",
+    "Monthly rent during holdover": 1110,
 }
 ```
 
@@ -271,12 +274,13 @@ Here’s rent for a summer-only lease:
 ```json
 {
     "Lease description": "Summer 2019",
+    "Lease due date": "2019-05-01",
     "Lease start date": "2019-07-01",
     "Lease end date": "2019-08-15",
     "Rent": [
         ["2019-07", 375]
     ],
-    "Lease due date": "2019-05-01",
+    "Monthly rent during holdover": 1110,
 }
 ```
 
@@ -285,6 +289,7 @@ Here’s rent for a fall-only lease:
 ```json
 {
     "Lease description": "Fall 2019",
+    "Lease due date": "2019-04-01",
     "Lease start date": "2019-08-15",
     "Lease end date": "2019-12-31",
     "Rent": [
@@ -294,6 +299,6 @@ Here’s rent for a fall-only lease:
         ["2019-11", 740],
         ["2019-12", 370]
     ],
-    "Lease due date": "2019-04-01",
+    "Monthly rent during holdover": 1110,
 }
 ```

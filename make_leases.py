@@ -53,6 +53,7 @@ with open(os.path.join('support', 'lease-info.tex'), 'w') as file:
     file.write('\\newcommand\securityDeposit{{\${:,.2f}}}\n'.format(info['Security deposit']))
     file.write('\DTMsavedate{{security deposit due date}}{{{}}}\n'.format(info['Security deposit due date']))
     file.write('\\newcommand\securityDepositLocation{{{}}}\n'.format(info['Security deposit location']))
+    file.write('\\newcommand\monthlyRentDuringHoldover{{\${:,.2f}}}\n'.format(info['Monthly rent during holdover']))
     file.write('\\newcommand\AlumniAdvisorName{{{}}}\n'.format(info['Alumni Advisor name']))
     file.write('\\newcommand\AlumniAdvisorAddress{{{}}}\n'.format(info['Alumni Advisor address']))
     file.write('\\newcommand\SigmaSignatoryName{{{}}}\n'.format(info['Sigma signatory name']))

@@ -23,6 +23,7 @@ if not os.path.exists(file_path):
             "Email address": "your.address@domain.com",
 
             "Lease description": "Fall {current_year} and Winter {next_year}",
+            "Lease due date": "{current_year}-04-01",
             "Lease start date": "{current_year}-08-15",
             "Lease end date": "{next_year}-05-15",
             "Rent": [
@@ -36,7 +37,7 @@ if not os.path.exists(file_path):
                 ["{next_year}-03", 740],
                 ["{next_year}-04", 740]
             ],
-            "Lease due date": "{current_year}-04-01",
+            "Monthly rent during holdover": 1110,
 
             "Security deposit": 500,
             "Security deposit due date": "{current_year}-05-15",
