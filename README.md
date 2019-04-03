@@ -184,7 +184,7 @@ to
 
 Dates are formatted as YYYY-MM-DD
 
-The list of monthly rents (starting with `["2019-08", 740]`) assumes a
+The list of monthly rents (starting with `["2019-08-15", 740]`) assumes a
 fall/winter lease with rent at $740/month. See
 [Example Rent Lists](#example-rent-lists) for more examples of lists of rent.
 
