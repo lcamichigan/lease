@@ -84,8 +84,7 @@ jobname = 'SigmaSignature'
 file_path = os.path.join(directory_name, jobname + '.pdf')
 if not os.path.exists(file_path):
     subprocess.check_call([
-        'luatex',
-        '-fmt=lualatex',
+        'lualatex',
         '-interaction=batchmode',
         '-jobname=' + jobname,
         '-output-directory=' + directory_name,

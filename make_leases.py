@@ -79,8 +79,7 @@ with open('tenants.csv') as file:
         # Run LuaTeX three times so that references are correct.
         for _ in range(2):
             subprocess.check_call([
-                'luatex',
-                '-fmt=lualatex',
+                'lualatex',
                 '-interaction=batchmode',
                 'Lease.tex'
             ])
