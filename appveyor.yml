@@ -31,7 +31,7 @@ install:
     hyphenex
     lastpage
     latex-bin
-    libertine
+    libertinus-fonts
     luaotfload
     luatex85
     oberdiek

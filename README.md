@@ -23,9 +23,9 @@ chapter house of [Sigma Zeta of ΛΧΑ](https://lcamichigan.com).
 
 To make leases, you need [LuaTeX](http://www.luatex.org),
 [Python](https://www.python.org), and the [Requests](http://python-requests.org)
-Python package. All of these are free and cross-platform. You also need the
-OpenType version of the font [Linux Libertine](http://libertine-fonts.org). This
-is also free, and you’ll get it automatically when you install LuaTeX.
+Python package. All of these are free and cross-platform. You also need the font
+[Libertinus](https://github.com/libertinus-fonts/libertinus). This is also free,
+and you’ll get it automatically when you install LuaTeX.
 
 To send leases, you need an email account.
 
