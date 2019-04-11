@@ -73,10 +73,14 @@ If Tenant delivers this signed Lease to Landlord after
 additional rent a late lease fee of \emph{\$20.00} per month after the Lease Due
 Date by the start of the Term of this Lease. For avoidance of doubt, if this
 Lease is delivered from \DTMmonthname{\themonth}
+\newcount\dayCount%
+\DTMsaveddateoffsettojulianday{lease due date}{1}{\dayCount}%
+\DTMsavejulianday{lease due date next day}{\dayCount}%
+\number\DTMfetchday{lease due date next day}–%
 \DTMsavedate{lease due date month end}{%
   \DTMfetchmonth{lease due date}-\DTMfetchmonth{lease due date}-last%
 }%
-2–\DTMfetchday{lease due date month end}, \DTMfetchyear{lease due date}, then
+\DTMfetchday{lease due date month end}, \DTMfetchyear{lease due date}, then
 Tenant shall pay a late lease fee of \$20.00; if this Lease is delivered in
 {%
   \DTMsetdatestyle{month year}%
