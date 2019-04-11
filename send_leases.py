@@ -103,7 +103,7 @@ with open('tenants.csv') as csv_file:
 
             2. If this will be your first time living in the Lambda Chi Alpha chapter house, on {security_deposit_invoice_date} you’ll be emailed an invoice for your ${security_deposit} security deposit. Please pay this invoice by {security_deposit_due_date}. If you’ve lived in the Lambda Chi Alpha chapter house before, we’ll apply your previous security deposit to this lease.
 
-            3. On {first_rent_invoice_date} you’ll be emailed an invoice for your first month’s rent. Please pay this invoice by {lease_start_date}.
+            3. On {first_rent_invoice_date} you’ll be emailed an invoice for your first rent installment. Please pay this invoice by {lease_start_date}.
 
             Please let me know if you have any questions.
 
