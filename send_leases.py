@@ -25,7 +25,7 @@ common_attachments = []
 for path in [os.path.join('support', 'lead_in_your_home_brochure_land_b_w_508_easy_print_0.pdf'), 'Move-In Form.rtf']:
     with open(path, 'rb') as file:
         attachment = MIMEApplication(file.read(), _subtype=os.path.splitext(path))
-    attachment.add_header('Content-Disposition', 'attachment', filename=os.path.basename(path))
+    attachment.add_header('Content-Disposition', 'attachment', filename=('utf-8', None, os.path.basename(path)))
     common_attachments.append(attachment)
 
 email_address = info['Email address'];
@@ -131,7 +131,7 @@ with open('tenants.csv') as csv_file:
         path = os.path.join('leases', '{} {} {} Lease.pdf'.format(tenant_first_name, tenant_last_name, info['Lease description']))
         with open(path, 'rb') as attached_file:
             attachment = MIMEApplication(attached_file.read(), _subtype=os.path.splitext(path))
-        attachment.add_header('Content-Disposition', 'attachment', filename=os.path.basename(path))
+        attachment.add_header('Content-Disposition', 'attachment', filename=('utf-8', None, os.path.basename(path)))
         message.attach(attachment)
 
         for attachment in common_attachments:
