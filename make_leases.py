@@ -67,7 +67,7 @@ with open('tenants.csv') as file:
 
         with open(os.path.join('support', 'tenant-info.tex'), 'w') as file:
             file.write('\\newcommand\\tenantName{{{} {}}}\n'.format(tenant_first_name, tenant_last_name))
-            tenant_address = row['Tenant address'].strip()
+            tenant_address = row['Tenant address'].strip().replace('#', '\#')
             file.write('\\newcommand\\tenantAddress{{{}}}\n'.format(tenant_address))
             file.write('\\newbool{{isFraternityMember}}\setbool{{isFraternityMember}}{{{}}}\n'.format(row['Is Fraternity member'].strip().lower()))
             file.write('\\newcommand\guarantorName{{{}}}\n'.format(row['Guarantor name'].strip()))
